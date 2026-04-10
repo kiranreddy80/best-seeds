@@ -173,66 +173,25 @@ const Footer = () => {
               We provide premium seeds, expert guidance, and complete farming support.
             </p>
             <div style={styles.socialLinks}>
-              <a 
-                href="#" 
-                style={styles.socialLink}
-                aria-label="Facebook"
-                onMouseEnter={(e) => {
-                  e.target.style.background = '#0076BE';
-                  e.target.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-                  e.target.style.transform = 'translateY(0)';
-                }}
-              >
-                📘
-              </a>
-              <a 
-                href="#" 
-                style={styles.socialLink}
-                aria-label="Twitter"
-                onMouseEnter={(e) => {
-                  e.target.style.background = '#0076BE';
-                  e.target.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-                  e.target.style.transform = 'translateY(0)';
-                }}
-              >
-                🐦
-              </a>
-              <a 
-                href="#" 
-                style={styles.socialLink}
-                aria-label="Instagram"
-                onMouseEnter={(e) => {
-                  e.target.style.background = '#0076BE';
-                  e.target.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-                  e.target.style.transform = 'translateY(0)';
-                }}
-              >
-                📷
-              </a>
-              <a 
-                href="#" 
-                style={styles.socialLink}
-                aria-label="WhatsApp"
-                onMouseEnter={(e) => {
-                  e.target.style.background = '#0076BE';
-                  e.target.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-                  e.target.style.transform = 'translateY(0)';
-                }}
-              >
-                💬
-              </a>
+              {['📘', '🐦', '📷', '💬'].map((icon, i) => (
+                <span
+                  key={i}
+                  role="button"
+                  tabIndex={0}
+                  style={styles.socialLink}
+                  aria-label={['Facebook', 'Twitter', 'Instagram', 'WhatsApp'][i]}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#0076BE';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  {icon}
+                </span>
+              ))}
             </div>
           </div>
 
@@ -271,24 +230,22 @@ const Footer = () => {
                 </Link>
               </li>
               <li style={styles.footerLinkItem}>
-                <a 
-                  href="#" 
-                  style={styles.footerLink}
+                <span
+                  style={{ ...styles.footerLink, cursor: 'pointer' }}
                   onMouseEnter={(e) => e.target.style.color = '#0076BE'}
                   onMouseLeave={(e) => e.target.style.color = '#d1d5db'}
                 >
                   Daily Prices
-                </a>
+                </span>
               </li>
               <li style={styles.footerLinkItem}>
-                <a 
-                  href="#" 
-                  style={styles.footerLink}
+                <span
+                  style={{ ...styles.footerLink, cursor: 'pointer' }}
                   onMouseEnter={(e) => e.target.style.color = '#0076BE'}
                   onMouseLeave={(e) => e.target.style.color = '#d1d5db'}
                 >
                   Medicines
-                </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -297,56 +254,17 @@ const Footer = () => {
           <div style={styles.footerSection}>
             <h4 style={styles.footerTitle}>Our Services</h4>
             <ul style={styles.footerLinks}>
-              <li style={styles.footerLinkItem}>
-                <a 
-                  href="#" 
-                  style={styles.footerLink}
-                  onMouseEnter={(e) => e.target.style.color = '#0076BE'}
-                  onMouseLeave={(e) => e.target.style.color = '#d1d5db'}
-                >
-                  Seed Delivery
-                </a>
-              </li>
-              <li style={styles.footerLinkItem}>
-                <a 
-                  href="#" 
-                  style={styles.footerLink}
-                  onMouseEnter={(e) => e.target.style.color = '#0076BE'}
-                  onMouseLeave={(e) => e.target.style.color = '#d1d5db'}
-                >
-                  Farm Management
-                </a>
-              </li>
-              <li style={styles.footerLinkItem}>
-                <a 
-                  href="#" 
-                  style={styles.footerLink}
-                  onMouseEnter={(e) => e.target.style.color = '#0076BE'}
-                  onMouseLeave={(e) => e.target.style.color = '#d1d5db'}
-                >
-                  Aqua Consulting
-                </a>
-              </li>
-              <li style={styles.footerLinkItem}>
-                <a 
-                  href="#" 
-                  style={styles.footerLink}
-                  onMouseEnter={(e) => e.target.style.color = '#0076BE'}
-                  onMouseLeave={(e) => e.target.style.color = '#d1d5db'}
-                >
-                  Expert Support
-                </a>
-              </li>
-              <li style={styles.footerLinkItem}>
-                <a 
-                  href="#" 
-                  style={styles.footerLink}
-                  onMouseEnter={(e) => e.target.style.color = '#0076BE'}
-                  onMouseLeave={(e) => e.target.style.color = '#d1d5db'}
-                >
-                  Training Programs
-                </a>
-              </li>
+              {['Seed Delivery', 'Farm Management', 'Aqua Consulting', 'Expert Support', 'Training Programs'].map((item, i) => (
+                <li key={i} style={styles.footerLinkItem}>
+                  <span
+                    style={{ ...styles.footerLink, cursor: 'pointer' }}
+                    onMouseEnter={(e) => e.target.style.color = '#0076BE'}
+                    onMouseLeave={(e) => e.target.style.color = '#d1d5db'}
+                  >
+                    {item}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
 
