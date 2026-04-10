@@ -1,6 +1,7 @@
 import react from 'react';
 import ClimateNews from "./ClimateNews"; 
 import AquaFarming from "./AquaFarming";
+import ContactUs from "./ContactUs";
 
 import React from 'react';
 const Home = () => {
@@ -470,7 +471,116 @@ const Home = () => {
       </section>
  <ClimateNews />
  <AquaFarming />
-      
+
+      {/* Contact Us Section */}
+      <section style={{ padding: '60px 0', background: 'white' }} id="contact">
+        <div style={styles.container}>
+          <div style={styles.sectionHeader}>
+            <h2 style={styles.sectionTitle}>Contact Us</h2>
+            <p style={styles.sectionSubtitle}>Have questions? Reach out to us anytime.</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', marginBottom: '40px' }}>
+            {[
+              { icon: '📞', label: 'Phone', value: '+1 (234) 567-890', color: '#0076BE' },
+              { icon: '✉️', label: 'Email', value: 'info@bestseeds.com', color: '#10b981' },
+              { icon: '📍', label: 'Address', value: 'Seed City, Farmland 12345', color: '#f59e0b' },
+              { icon: '💬', label: 'WhatsApp', value: '+1 (234) 567-891', color: '#6366f1' }
+            ].map((item, i) => (
+              <div key={i} style={{
+                background: '#f8fafc', borderRadius: '12px', padding: '24px',
+                textAlign: 'center', transition: 'transform 0.3s'
+              }}
+                onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-4px)'}
+                onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+              >
+                <div style={{ fontSize: '2rem', marginBottom: '8px' }}>{item.icon}</div>
+                <div style={{ fontSize: '0.8rem', color: '#9ca3af', fontWeight: 600, textTransform: 'uppercase', marginBottom: '6px' }}>{item.label}</div>
+                <div style={{ fontSize: '1rem', fontWeight: 700, color: item.color }}>{item.value}</div>
+              </div>
+            ))}
+          </div>
+          <ContactUs />
+        </div>
+      </section>
+
+      {/* Terms & Privacy Section */}
+      <section style={{ padding: '80px 0', background: '#f8fafc' }} id="terms">
+        <div style={styles.container}>
+          <div style={styles.sectionHeader}>
+            <h2 style={styles.sectionTitle}>Terms & Privacy</h2>
+            <p style={styles.sectionSubtitle}>Transparency and trust are at the core of everything we do.</p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', maxWidth: '1000px', margin: '0 auto' }}>
+            {/* Terms & Conditions */}
+            <div style={{
+              background: 'white', borderRadius: '16px', padding: '36px',
+              boxShadow: '0 2px 16px rgba(0,0,0,0.06)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
+                <div style={{
+                  width: '42px', height: '42px', borderRadius: '10px',
+                  background: '#e0f2fe', display: 'flex', alignItems: 'center',
+                  justifyContent: 'center', fontSize: '1.2rem'
+                }}>📋</div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1f2937', margin: 0 }}>Terms & Conditions</h3>
+              </div>
+              {[
+                { title: 'Acceptance', text: 'By using Best Seeds, you agree to be bound by these terms of service.' },
+                { title: 'Orders', text: 'All orders are subject to availability and price confirmation at checkout.' },
+                { title: 'Delivery', text: 'Temperature-controlled delivery within 24 hours for local orders.' },
+                { title: 'Pricing', text: 'Real-time market rates, locked at the time of order confirmation.' },
+                { title: 'Returns', text: 'Transit damage claims accepted within 24 hours with photo evidence.' },
+                { title: 'Quality', text: '98% survival rate guaranteed when handling guidelines are followed.' }
+              ].map((item, i) => (
+                <div key={i} style={{
+                  padding: '14px 0',
+                  borderBottom: i < 5 ? '1px solid #f1f5f9' : 'none'
+                }}>
+                  <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#1f2937', marginBottom: '4px' }}>{item.title}</div>
+                  <div style={{ fontSize: '0.835rem', color: '#6b7280', lineHeight: 1.6 }}>{item.text}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Privacy Policy */}
+            <div style={{
+              background: 'white', borderRadius: '16px', padding: '36px',
+              boxShadow: '0 2px 16px rgba(0,0,0,0.06)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
+                <div style={{
+                  width: '42px', height: '42px', borderRadius: '10px',
+                  background: '#d1fae5', display: 'flex', alignItems: 'center',
+                  justifyContent: 'center', fontSize: '1.2rem'
+                }}>🔒</div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1f2937', margin: 0 }}>Privacy Policy</h3>
+              </div>
+              {[
+                { title: 'Data Collection', text: 'We collect name, email, phone, and order details to serve you.' },
+                { title: 'Usage', text: 'Your data powers order processing, delivery updates, and farming advice.' },
+                { title: 'Protection', text: 'SSL/TLS encryption with strict access controls and regular audits.' },
+                { title: 'Sharing', text: 'Shared only with delivery and payment partners. Never sold to third parties.' },
+                { title: 'Your Rights', text: 'Access, update, or delete your data anytime through your account.' },
+                { title: 'Cookies', text: 'Essential and analytics cookies used. Manage via browser settings.' }
+              ].map((item, i) => (
+                <div key={i} style={{
+                  padding: '14px 0',
+                  borderBottom: i < 5 ? '1px solid #f1f5f9' : 'none'
+                }}>
+                  <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#1f2937', marginBottom: '4px' }}>{item.title}</div>
+                  <div style={{ fontSize: '0.835rem', color: '#6b7280', lineHeight: 1.6 }}>{item.text}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p style={{ textAlign: 'center', color: '#9ca3af', fontSize: '0.8rem', marginTop: '28px' }}>
+            Last updated: April 2026. By continuing to use our platform, you agree to these policies.
+          </p>
+        </div>
+      </section>
+
     </div>
   );
 };

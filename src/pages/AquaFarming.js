@@ -487,36 +487,6 @@ const AquaFarming = () => {
           </div>
         </div>
 
-        {/* Quick Support */}
-        <div style={styles.supportSection}>
-          <h2 style={styles.supportTitle}>Need Immediate Help?</h2>
-          <p style={styles.supportSubtitle}>Our aquaculture experts are available 24/7 to assist you</p>
-          <div style={styles.supportGrid}>
-            {[
-              { icon: "📞", method: "Call Expert", detail: "+1 (555) 123-FARM" },
-              { icon: "💬", method: "Chat Now", detail: "24/7 Live Support" },
-              { icon: "📧", method: "Email Us", detail: "support@bestseeds.com" }
-            ].map((item, i) => (
-              <div 
-                key={i} 
-                style={styles.supportCard}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)';
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                }}
-              >
-                <div style={styles.supportIcon}>{item.icon}</div>
-                <div style={styles.supportMethod}>{item.method}</div>
-                <div style={styles.supportDetail}>{item.detail}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Footer CTA */}
         <div style={styles.footerCTA}>
           <p style={{color: '#6b7280', marginBottom: '24px', fontSize: '1.125rem'}}>

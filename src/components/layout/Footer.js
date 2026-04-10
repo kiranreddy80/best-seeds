@@ -393,30 +393,46 @@ const Footer = () => {
               &copy; {currentYear} Best Seeds. All rights reserved.
             </div>
             <div style={styles.footerBottomLinks}>
-              <a 
-                href="#" 
+              <Link
+                to="/privacy"
                 style={styles.footerBottomLink}
                 onMouseEnter={(e) => e.target.style.color = '#0076BE'}
                 onMouseLeave={(e) => e.target.style.color = '#9ca3af'}
               >
                 Privacy Policy
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link
+                to="/terms"
                 style={styles.footerBottomLink}
                 onMouseEnter={(e) => e.target.style.color = '#0076BE'}
                 onMouseLeave={(e) => e.target.style.color = '#9ca3af'}
               >
                 Terms of Service
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link
+                to="/contact"
                 style={styles.footerBottomLink}
                 onMouseEnter={(e) => e.target.style.color = '#0076BE'}
                 onMouseLeave={(e) => e.target.style.color = '#9ca3af'}
               >
-                Cookie Policy
-              </a>
+                Contact Us
+              </Link>
+              <button
+                onClick={() => {
+                  if (window.confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+                    alert('Account deletion request submitted. Our team will contact you shortly.');
+                  }
+                }}
+                style={{
+                  background: 'none', border: 'none', cursor: 'pointer',
+                  color: '#ef4444', fontSize: '0.875rem',
+                  transition: 'color 0.3s ease', padding: 0
+                }}
+                onMouseEnter={(e) => e.target.style.color = '#dc2626'}
+                onMouseLeave={(e) => e.target.style.color = '#ef4444'}
+              >
+                Delete Account
+              </button>
             </div>
           </div>
         </div>

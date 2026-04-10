@@ -841,8 +841,31 @@
   .weather-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .news-card {
     padding: 20px;
+  }
+}
+
+/* Terms, Privacy, Contact - Responsive Overrides */
+@media (max-width: 900px) {
+  /* Terms sidebar + content → single column */
+  div[style*="grid-template-columns: 280px"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Contact form + FAQ → single column */
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Contact form fields → single column */
+  div[style*="grid-template-columns: 1fr 1fr"][style*="gap: 16px"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Privacy cards → single column */
+  div[style*="minmax(360px"] {
+    grid-template-columns: 1fr !important;
   }
 }
