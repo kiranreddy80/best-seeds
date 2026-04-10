@@ -1,9 +1,7 @@
-import react from 'react';
-import ClimateNews from "./ClimateNews"; 
+import React from 'react';
+import ClimateNews from "./ClimateNews";
 import AquaFarming from "./AquaFarming";
 import ContactUs from "./ContactUs";
-
-import React from 'react';
 const Home = () => {
   const features = [
     {

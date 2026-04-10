@@ -302,14 +302,6 @@ const AquaFarming = () => {
     }
   };
 
-  // Add hover effects
-  const addHover = (baseStyle) => ({
-    ...baseStyle,
-    ':hover': {
-      transform: 'translateY(-4px)',
-      boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
-    }
-  });
 
   const tips = [
     {
