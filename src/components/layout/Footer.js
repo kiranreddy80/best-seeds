@@ -33,16 +33,12 @@ const Footer = () => {
       marginBottom: '1rem'
     },
     logoIcon: {
-      width: '40px',
-      height: '40px',
-      background: '#0076BE',
+      width: '48px',
+      height: '48px',
+      background: '#ffffff',
       borderRadius: '8px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: 'white',
-      fontWeight: 'bold',
-      fontSize: '16px'
+      objectFit: 'contain',
+      padding: '3px'
     },
     footerLogoText: {
       display: 'flex',
@@ -162,7 +158,7 @@ const Footer = () => {
           {/* Company Info */}
           <div style={styles.footerSection}>
             <div style={styles.footerLogo}>
-              <div style={styles.logoIcon}>BS</div>
+              <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Best Seeds" style={styles.logoIcon} />
               <div style={styles.footerLogoText}>
                 <h3 style={styles.footerLogoTitle}>Best Seeds</h3>
                 <p style={styles.footerLogoSubtitle}>Aquaculture Solutions</p>
@@ -276,21 +272,21 @@ const Footer = () => {
                 <span style={styles.contactIcon}>📞</span>
                 <div style={styles.contactDetails}>
                   <div style={styles.contactLabel}>Phone</div>
-                  <div style={styles.contactValue}>+1 (234) 567-890</div>
+                  <div style={styles.contactValue}>+91 97047 56582</div>
                 </div>
               </div>
               <div style={styles.contactItem}>
                 <span style={styles.contactIcon}>✉️</span>
                 <div style={styles.contactDetails}>
                   <div style={styles.contactLabel}>Email</div>
-                  <div style={styles.contactValue}>info@bestseeds.com</div>
+                  <div style={styles.contactValue}>bestseed25@gmail.com</div>
                 </div>
               </div>
               <div style={styles.contactItem}>
                 <span style={styles.contactIcon}>📍</span>
                 <div style={styles.contactDetails}>
                   <div style={styles.contactLabel}>Address</div>
-                  <div style={styles.contactValue}>Seed City, Farmland 12345</div>
+                  <div style={styles.contactValue}>Cheyyuru, Dr. B.R. Ambedkar Konaseema, Andhra Pradesh 533222</div>
                 </div>
               </div>
               <div style={styles.contactItem}>

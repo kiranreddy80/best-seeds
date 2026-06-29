@@ -479,10 +479,10 @@ const Home = () => {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { icon: '📞', label: 'Phone', value: '+1 (234) 567-890', color: '#0076BE' },
-              { icon: '✉️', label: 'Email', value: 'info@bestseeds.com', color: '#10b981' },
-              { icon: '📍', label: 'Address', value: 'Seed City, Farmland 12345', color: '#f59e0b' },
-              { icon: '💬', label: 'WhatsApp', value: '+1 (234) 567-891', color: '#6366f1' }
+              { icon: '📞', label: 'Phone', value: '+91 97047 56582', color: '#0076BE' },
+              { icon: '✉️', label: 'Email', value: 'bestseed25@gmail.com', color: '#10b981' },
+              { icon: '📍', label: 'Address', value: 'Cheyyuru, Dr. B.R. Ambedkar Konaseema, Andhra Pradesh 533222', color: '#f59e0b' },
+              { icon: '💬', label: 'WhatsApp', value: '+91 97047 56582', color: '#6366f1' }
             ].map((item, i) => (
               <div key={i} style={{
                 background: '#f8fafc', borderRadius: '12px', padding: '24px',

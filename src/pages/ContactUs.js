@@ -25,7 +25,7 @@ const ContactUs = () => {
     {
       icon: '📞',
       title: 'Call Us',
-      detail: '+1 (234) 567-890',
+      detail: '+91 97047 56582',
       sub: 'Mon-Sun, 24/7 Available',
       color: '#0076BE',
       bg: '#e0f2fe'
@@ -33,7 +33,7 @@ const ContactUs = () => {
     {
       icon: '✉️',
       title: 'Email Us',
-      detail: 'info@bestseeds.com',
+      detail: 'bestseed25@gmail.com',
       sub: 'We reply within 2 hours',
       color: '#10b981',
       bg: '#d1fae5'
@@ -41,7 +41,7 @@ const ContactUs = () => {
     {
       icon: '📍',
       title: 'Visit Us',
-      detail: 'Seed City, Farmland 12345',
+      detail: 'Cheyyuru, Dr. B.R. Ambedkar Konaseema, Andhra Pradesh 533222',
       sub: 'Open for walk-ins',
       color: '#f59e0b',
       bg: '#fef3c7'
@@ -49,7 +49,7 @@ const ContactUs = () => {
     {
       icon: '💬',
       title: 'WhatsApp',
-      detail: '+1 (234) 567-891',
+      detail: '+91 97047 56582',
       sub: 'Quick chat support',
       color: '#6366f1',
       bg: '#e0e7ff'
@@ -504,7 +504,7 @@ const ContactUs = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (234) 567-890"
+                      placeholder="+91 97047 56582"
                       style={styles.input}
                       onFocus={(e) => e.target.style.borderColor = '#0076BE'}
                       onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}

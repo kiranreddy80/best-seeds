@@ -19,7 +19,11 @@ const Header = () => {
         <div className="header-content">
           {/* Logo */}
           <Link to="/" className="logo">
-            <div className="logo-icon">BS</div>
+            <img
+              src={process.env.PUBLIC_URL + '/logo192.png'}
+              alt="Best Seeds"
+              className="logo-icon"
+            />
             <div className="logo-text">Best Seeds</div>
           </Link>
           

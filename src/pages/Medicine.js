@@ -147,11 +147,11 @@ const Medicines = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="text-center">
                 <p className="font-semibold text-yellow-800">📞 Emergency Hotline</p>
-                <p className="text-lg font-bold">+1 (555) 123-HELP</p>
+                <p className="text-lg font-bold">+91 97047 56582</p>
               </div>
               <div className="text-center">
                 <p className="font-semibold text-yellow-800">✉️ Email Support</p>
-                <p className="text-lg font-bold">emergency@bestseeds.com</p>
+                <p className="text-lg font-bold">bestseed25@gmail.com</p>
               </div>
             </div>
           </div>

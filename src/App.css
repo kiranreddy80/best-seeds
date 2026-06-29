@@ -475,16 +475,13 @@
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
-  background: #0076BE;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
+  object-fit: contain;
+  padding: 2px;
+  box-shadow: 0 1px 4px rgba(0, 118, 190, 0.15);
 }
 
 .logo-text {
